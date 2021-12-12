@@ -17,16 +17,16 @@
   </div>
 </template>
 <script>
-import {useStore} from 'vuex'
+import { useStore } from 'vuex'
 export default {
-  name:'App',
-  setup() { 
-    const store=useStore()
-    console.log(store.getters.newName);
-    const mutationsFn=()=>{ 
+  name: 'App',
+  setup () {
+    const store = useStore()
+    console.log(store.getters.newName)
+    const mutationsFn = () => {
       store.dispatch('updateName')
     }
-    return {mutationsFn}
-  },
+    return { mutationsFn }
+  }
 }
 </script>
