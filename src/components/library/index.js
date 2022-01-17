@@ -13,6 +13,7 @@ import XtxMore from './xtx-more.vue'
 import XtxBread from './xtx-bread.vue'
 import XtxBreadItem from './xtx-bread-item.vue' */
 //目录 是否加载子目录 正则
+import Message from './message'
 const importFn = require.context('./', false, /\.vue$/)
 export default {
     install(app) {
@@ -30,6 +31,8 @@ export default {
             })
             //定义指令
         defineDirective(app)
+            //定义一个原型函数
+        app.config.globalProperties.$message = Message
     }
 }
 //定义指令

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-12-07 18:15:18
- * @LastEditTime: 2021-12-07 20:35:22
+ * @LastEditTime: 2022-01-02 18:10:25
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \项目完整源码\rabbit\eribbit\src\components\app-header.vue
@@ -15,21 +15,19 @@
         <i class="iconfont icon-search"></i>
         <input type="text" placeholder="搜一搜">
       </div>
-      <div class="cart">
-        <a class="curr" href="#">
-          <i class="iconfont icon-cart"></i><em>2</em>
-        </a>
-      </div>
+      <AppHeaderCart />
     </div>
   </header>
 </template>
 
 <script>
 import AppHeaderNav from './app-header-nav.vue'
+import AppHeaderCart from './app-header-cart.vue'
 export default {
   name: 'AppHeader',
   components:{
-      AppHeaderNav
+      AppHeaderNav,
+      AppHeaderCart
   }
 }
 </script>

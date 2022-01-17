@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-12-07 20:30:15
- * @LastEditTime: 2021-12-07 22:55:42
+ * @LastEditTime: 2021-12-13 14:45:10
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \项目完整源码\rabbit\eribbit\src\components\app-header-nav.vue
@@ -9,7 +9,7 @@
 <template>
   <ul class="app-header-nav">
         <li class="home"><RouterLink to="/">首页</RouterLink></li>
-        <li v-for="item in list" :key="item.id" @mouseenter="show(item)" @mouseleave="hide(item)">
+        <li v-for="item in list" :key="item.id" @mousemove="show(item)" @mouseleave="hide(item)">
           <RouterLink @click="hide(item)" :to="`/category/${item.id}`">{{item.name}}</RouterLink>
         <div class="layer" :class="{open:item.open}">
             <ul>
